@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{083A98B4-2C57-4499-6143-5DF1EF5C9CA5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -63,7 +64,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Bullet.cs" />
+    <Compile Include="Assets\Enemy.cs" />
     <Compile Include="Assets\PlayerMovement.cs" />
+    <Compile Include="Assets\PlayerShoot.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Scenes\OverTheShoulderAim\ActivateOnKeypress.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Scenes\Scripting\ScriptingExample.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Scenes\Trigger volumes\GenericTrigger.cs" />
