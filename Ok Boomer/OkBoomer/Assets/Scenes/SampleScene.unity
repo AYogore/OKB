@@ -818,7 +818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  deathEffect: {fileID: 3256222312323726886, guid: a496b0c3d4b32db4790b3529657f741d,
+  deathEffect: {fileID: 3142139513118716579, guid: 77c6d9345a192d148992c6423b5869e3,
     type: 3}
 --- !u!61 &1342703589
 BoxCollider2D:
@@ -1079,7 +1079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  deathEffect: {fileID: 3256222312323726886, guid: a496b0c3d4b32db4790b3529657f741d,
+  deathEffect: {fileID: 3142139513118716579, guid: 77c6d9345a192d148992c6423b5869e3,
     type: 3}
 --- !u!61 &1364116248
 BoxCollider2D:
@@ -1175,7 +1175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  deathEffect: {fileID: 3256222312323726886, guid: a496b0c3d4b32db4790b3529657f741d,
+  deathEffect: {fileID: 3142139513118716579, guid: 77c6d9345a192d148992c6423b5869e3,
     type: 3}
 --- !u!61 &1431488291
 BoxCollider2D:
@@ -5655,7 +5655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  deathEffect: {fileID: 3256222312323726886, guid: a496b0c3d4b32db4790b3529657f741d,
+  deathEffect: {fileID: 3142139513118716579, guid: 77c6d9345a192d148992c6423b5869e3,
     type: 3}
 --- !u!61 &1716359070
 BoxCollider2D:
