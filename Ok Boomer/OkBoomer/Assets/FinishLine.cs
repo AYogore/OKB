@@ -7,9 +7,12 @@ public class FinishLine : MonoBehaviour
 {
     public GameObject winText;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D player)
     {
-        Time.timeScale = 0f;
-        winText.SetActive(true);
+        if (player.tag == "Player")
+        {
+            Time.timeScale = 0f;
+            winText.SetActive(true);
+        }
     }
 }
