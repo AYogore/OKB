@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(isGrounded == true)
         {
-            extraJumps = 2;
+            extraJumps = 1;
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
