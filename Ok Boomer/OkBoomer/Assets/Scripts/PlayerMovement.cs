@@ -17,9 +17,12 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask IsGround;
 
     private int extraJumps;
+
+    private Animator anim;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -31,7 +34,16 @@ public class PlayerMovement : MonoBehaviour
         moveHorizontal = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveHorizontal * speed, rb.velocity.y);
 
-        if(facingRight == false && moveHorizontal > 0)
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        {
+            anim.SetBool("isRunning", true);
+        }
+        else
+        {
+            anim.SetBool("isRunning", false);
+        }
+
+        if (facingRight == false && moveHorizontal > 0)
         { Flip();  }
         else if(facingRight == true && moveHorizontal < 0)
         { Flip();  }
