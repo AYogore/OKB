@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerShoot.cs" />
+    <Compile Include="Assets\Tutorial.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/adyog/Documents/GitHub/OKB/OKB/Ok Boomer/OkBoomer/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
