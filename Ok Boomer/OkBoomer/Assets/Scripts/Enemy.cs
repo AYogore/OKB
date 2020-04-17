@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public bool movingRight = true;
     public SpriteRenderer mySprite;
 
+ 
     private void Awake()
     {
         mySprite = GetComponent<SpriteRenderer>();
@@ -18,14 +19,9 @@ public class Enemy : MonoBehaviour
     }
     private void Update()
     {
-        if(nearPlayer == true)
-        {
-            Attack();
-        }
-        else
-        {
-            Patrol();
-        }
+        Patrol();
+        
+       
     }
 
     private void OnTriggerEnter2D(Collider2D coll)
@@ -41,6 +37,11 @@ public class Enemy : MonoBehaviour
             {
                 movingRight = true;
             }
+        }
+
+        if(coll.gameObject.CompareTag("Player"))
+        {
+            nearPlayer = true;
         }
             
     }
@@ -61,10 +62,8 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public virtual void Attack()
-    {
+   
 
-    }
     public void TakeDamage (int damage)
     {
         health -= damage;
