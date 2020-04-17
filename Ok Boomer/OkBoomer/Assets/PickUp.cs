@@ -16,7 +16,6 @@ public class PickUp : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(score);
         Display();
     }
     private void OnTriggerEnter2D(Collider2D pickup)
