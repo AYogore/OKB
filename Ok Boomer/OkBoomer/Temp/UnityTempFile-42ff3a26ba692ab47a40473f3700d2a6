@@ -302,6 +302,7 @@
 /define:ENABLE_LEGACY_INPUT_MANAGER
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
+Assets\EnemyPatrol.cs
 "Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Scenes\OverTheShoulderAim\ActivateOnKeypress.cs"
 "Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Scenes\Scripting\ScriptingExample.cs"
 "Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Scenes\Trigger volumes\GenericTrigger.cs"
@@ -318,6 +319,7 @@ Assets\Scripts\Bullet.cs
 Assets\Scripts\Coin.cs
 Assets\Scripts\Enemy.cs
 Assets\Scripts\EnemyBullet.cs
+Assets\Scripts\EnemyShoot.cs
 Assets\Scripts\FinishLine.cs
 Assets\Scripts\PickUp.cs
 Assets\Scripts\PlayerMovement.cs

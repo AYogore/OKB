@@ -11,16 +11,21 @@ public class Enemy : MonoBehaviour
     public bool movingRight = true;
     public SpriteRenderer mySprite;
 
- 
+    public Transform firepoint;
+    public GameObject bulletPrefab;
+
+
     private void Awake()
     {
         mySprite = GetComponent<SpriteRenderer>();
         mySprite.flipX = false;
     }
-    private void Update()
+    void Update()
     {
         Patrol();
-        
+
+       // if (nearPlayer == true)
+           // Shoot();
        
     }
 
@@ -39,10 +44,7 @@ public class Enemy : MonoBehaviour
             }
         }
 
-        if(coll.gameObject.CompareTag("Player"))
-        {
-            nearPlayer = true;
-        }
+        
             
     }
 
@@ -62,7 +64,10 @@ public class Enemy : MonoBehaviour
         }
     }
 
-   
+    void Shoot()
+    {
+        Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);
+    }
 
     public void TakeDamage (int damage)
     {
