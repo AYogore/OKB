@@ -11,14 +11,18 @@ public class Enemy : MonoBehaviour
     public bool movingRight = true;
     public SpriteRenderer mySprite;
 
-    public Transform firepoint;
-    public GameObject bulletPrefab;
+    public Transform firepointL;
+    public GameObject bulletPrefabL;
+    public Transform firepointR;
+    public GameObject bulletPrefabR;
 
+    public EnemyShoot shoot;
 
     private void Awake()
     {
         mySprite = GetComponent<SpriteRenderer>();
         mySprite.flipX = false;
+        shoot = GetComponent<EnemyShoot>();
     }
     void Update()
     {
@@ -54,19 +58,18 @@ public class Enemy : MonoBehaviour
         {
             transform.Translate(2 * Time.deltaTime * speed, 0, 0);
             mySprite.flipX = false;
+            shoot.firepoint = firepointR;
+            shoot.bulletPrefab = bulletPrefabR;
 
         }
         else
         {
             transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
             mySprite.flipX = true;
+            shoot.firepoint = firepointL;
+            shoot.bulletPrefab = bulletPrefabL;
 
         }
-    }
-
-    void Shoot()
-    {
-        Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);
     }
 
     public void TakeDamage (int damage)
