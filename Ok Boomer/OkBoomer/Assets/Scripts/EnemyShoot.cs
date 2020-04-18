@@ -6,13 +6,15 @@ public class EnemyShoot : MonoBehaviour
 {
     public Transform firepoint;
     public GameObject bulletPrefab;
-    private void OnTriggerEnter2D(Collider2D player)
+    private void Update()
     {
+        
         Shoot();
     }
 
     void Shoot()
     {
+
         Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);
     }
 }

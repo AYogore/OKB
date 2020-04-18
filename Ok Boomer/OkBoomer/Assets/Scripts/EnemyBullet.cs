@@ -21,6 +21,7 @@ public class EnemyBullet : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         
+        Destroy(gameObject);
     }
 
 }
