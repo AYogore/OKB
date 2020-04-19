@@ -17,12 +17,14 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask IsGround;
 
     private int extraJumps;
+    public AudioSource jumpSound;
 
     private Animator anim;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        jumpSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -61,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpForce;
             extraJumps--;
+            jumpSound.Play();
         }
         else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded == true)
         {

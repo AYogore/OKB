@@ -28,6 +28,6 @@ public class PickUp : MonoBehaviour
 
     public void Display()
     {
-        scoreText.text = $"Score = {score}";
+        scoreText.text = $" = {score}";
     }
 }

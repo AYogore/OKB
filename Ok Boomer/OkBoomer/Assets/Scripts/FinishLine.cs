@@ -13,8 +13,7 @@ public class FinishLine : MonoBehaviour
     {
         if (player.tag == "Player")
         {
-            SceneManager.LoadScene("Level1");
-            //Time.timeScale = 0f;
+            Time.timeScale = 0f;
             winText.SetActive(true);
         }
     }
