@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         {
             extraJumps = 1;
         }
-
+        
         if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
         {
             rb.velocity = Vector2.up * jumpForce;
