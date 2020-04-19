@@ -14,7 +14,6 @@ public class EnemyShoot : MonoBehaviour
 
     void Shoot()
     {
-
         Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);
     }
 }

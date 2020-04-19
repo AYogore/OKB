@@ -5,22 +5,22 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
     public float speed = 20f;
-    public int damage = 0;
+    public int damage = 1;
     public Rigidbody2D rb;
 
-    public GameObject target;
-    Vector2 moveDirection;
     void Start()
     {
-
-        target = GameObject.FindGameObjectWithTag("Player");
-        moveDirection = (target.transform.position - transform.position).normalized * speed;
-        rb.velocity = moveDirection;
+        rb.velocity = transform.right * speed;
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        
+        Player player = hitInfo.GetComponent<Player>();
+        if (player != null)
+        {
+            player.TakeDamage(damage);
+        }
+        Debug.Log("Hit");
         Destroy(gameObject);
     }
 
