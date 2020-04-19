@@ -46,3 +46,18 @@ Ok Boomer/OkBoomer/Temp/UnityTempFile-3ae022dafb4d41c488b5a9358f43db6c
 Ok Boomer/OkBoomer/Temp/UnityTempFile-5339e2b06a34d184caca03d89098d9a9
 Ok Boomer/OkBoomer/Temp/UnityTempFile-bc4a9fcfda93ea64c986acfa9b1f39df
 Ok Boomer/OkBoomer/Temp/UnityTempFile-d542dd483f2b6fd47bca4f140e8310cc
+*.bin
+*.log
+*.js
+*.symbols
+*.wasm
+*.mdb
+*.buildreport
+*.bc
+*.o
+*.unity3d
+*.resource
+*.yaml
+Ok Boomer/OkBoomer/Library/il2cpp_cache 2019.2.17f1 (8e603399ca02)
+*.ide
+*.config
