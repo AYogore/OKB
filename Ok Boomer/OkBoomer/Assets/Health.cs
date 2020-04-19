@@ -3,29 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour
+public class Health : MonoBehaviour
 {
-    public int health = 1;
-    public float speed;
-    public GameObject deathEffect;
-
-    
+    public int health;
     public int numOFHearts;
 
     public Image[] hearts;
     public Sprite full;
     public Sprite empty;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         for (int i = 0; i < hearts.Length; i++)
         {
-            if (i < health)
+            if(i < health)
             {
                 hearts[i].sprite = full;
             }
@@ -33,7 +24,7 @@ public class Player : MonoBehaviour
             {
                 hearts[i].sprite = empty;
             }
-            if (i < numOFHearts)
+            if(i < numOFHearts)
             {
                 hearts[i].enabled = true;
             }
@@ -43,19 +34,6 @@ public class Player : MonoBehaviour
             }
         }
     }
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
 
-        if (health <= 0)
-        {
-            Die();
-        }
-    }
-
-    void Die()
-    {
-        Instantiate(deathEffect, transform.position, Quaternion.identity);
-        Destroy(gameObject);
-    }
+   
 }
