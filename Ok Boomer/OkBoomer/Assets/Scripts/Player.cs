@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
 
     void Die()
     {
-        Instantiate(deathEffect, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        Time.timeScale = 0;
+        deathEffect.SetActive(true);
     }
 }
