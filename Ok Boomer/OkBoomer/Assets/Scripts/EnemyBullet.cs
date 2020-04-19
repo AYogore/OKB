@@ -20,7 +20,7 @@ public class EnemyBullet : MonoBehaviour
         {
             player.TakeDamage(damage);
         }
-        Debug.Log("Hit");
+
         Destroy(gameObject);
     }
 

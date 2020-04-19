@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FinishLine : MonoBehaviour
 {
     public GameObject winText;
 
+    
     private void OnTriggerEnter2D(Collider2D player)
     {
         if (player.tag == "Player")
         {
-            Time.timeScale = 0f;
+            SceneManager.LoadScene("Level1");
+            //Time.timeScale = 0f;
             winText.SetActive(true);
         }
     }
