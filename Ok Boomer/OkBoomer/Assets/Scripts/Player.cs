@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     public Image[] hearts;
     public Sprite full;
     public Sprite empty;
+
+    public int ammo;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -48,6 +50,12 @@ public class Player : MonoBehaviour
                 hearts[i].enabled = false;
             }
         }
+
+        if(ammo > 0)
+        {
+            PlayerMovement playerMovement = GetComponent<PlayerMovement>();
+            playerMovement.hasAmmo = true;
+        }    
     }
     public void TakeDamage(int damage)
     {

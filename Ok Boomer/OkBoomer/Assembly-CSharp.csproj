@@ -63,8 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Ammo.cs" />
     <Compile Include="Assets\Crossfade.cs" />
     <Compile Include="Assets\EnemyPatrol.cs" />
+    <Compile Include="Assets\LifeUp.cs" />
     <Compile Include="Assets\Respawn.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Scenes\OverTheShoulderAim\ActivateOnKeypress.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Scenes\Scripting\ScriptingExample.cs" />

@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     private int extraJumps;
     public AudioSource jumpSound;
 
+    public bool hasAmmo;
+    public bool isPunching;
     private Animator anim;
     void Start()
     {
@@ -68,7 +70,39 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded == true)
         {
             rb.velocity = Vector2.up * jumpForce;
+            anim.SetBool("isExtraJump", true);
+
         }
+
+        //Jump Animation Bools
+        if(rb.velocity.y == 0 || isGrounded)
+        {
+            anim.SetBool("isJumping", false);
+            anim.SetBool("isFalling", false);
+
+        }
+        if (rb.velocity.y > 1)
+        {
+            anim.SetBool("isJumping", true);
+        }
+        if (rb.velocity.y < -2)
+        {
+            anim.SetBool("isJumping", false);
+            anim.SetBool("isFalling", true);
+
+        }
+
+        //Gun Animation
+        if(hasAmmo == true)
+        {
+            anim.SetBool("hasAmmo", true);
+        }
+        else
+        {
+            anim.SetBool("hasAmmo", false);
+
+        }
+        
     }
 
     void Flip() //flips direction and character model

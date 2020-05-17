@@ -8,6 +8,8 @@ TagManager:
   - PickUp
   - Turn
   - Enemy
+  - LifeUP
+  - Ammo
   layers:
   - Default
   - TransparentFX
