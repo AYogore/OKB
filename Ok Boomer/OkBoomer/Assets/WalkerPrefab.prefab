@@ -284,7 +284,10 @@ MonoBehaviour:
   bulletPrefabR: {fileID: 3256222312323726886, guid: aeb3e2e774faaaa4196799e6be4b9453,
     type: 3}
   shoot: {fileID: 3642235085179849354}
-  drops: []
+  drops:
+  - {fileID: 2206257305819686113, guid: bc55990c9e046024e8e10fa1408aa5eb, type: 3}
+  - {fileID: 1436107568227474683, guid: 63da8107eebb4ad458db69aa24a864c2, type: 3}
+  - {fileID: 1293046691551185527, guid: 2430a36dd72e4ad40b6a79373116009d, type: 3}
 --- !u!212 &3642235085179849350
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -341,7 +344,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3642235085179849348}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16d370571f431fd40bcfd16bca622491, type: 3}
   m_Name: 
@@ -349,7 +352,6 @@ MonoBehaviour:
   firepoint: {fileID: 3642235084855043283}
   bulletPrefab: {fileID: 3256222312323726886, guid: 45b045f16b30128438ac5df8d0ac8a9a,
     type: 3}
-  SecondsToRepeat: 1
 --- !u!1 &3642235085687783162
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,7 +362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3642235085687783163}
   m_Layer: 0
-  m_Name: EnemyPrefab (4)
+  m_Name: WalkerPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

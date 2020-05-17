@@ -6,10 +6,11 @@ public class EnemyShoot : MonoBehaviour
 {
     public Transform firepoint;
     public GameObject bulletPrefab;
+    public int SecondsToRepeat;
     private void Start()
     {
 
-        InvokeRepeating("Shoot", 1, 1);
+        InvokeRepeating("Shoot", 1, SecondsToRepeat);
     }
 
     void Shoot()

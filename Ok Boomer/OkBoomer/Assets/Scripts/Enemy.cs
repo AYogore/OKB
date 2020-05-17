@@ -18,11 +18,14 @@ public class Enemy : MonoBehaviour
 
     public EnemyShoot shoot;
 
+    public GameObject[] drops;
+
     private void Awake()
     {
         mySprite = GetComponent<SpriteRenderer>();
         mySprite.flipX = false;
         shoot = GetComponent<EnemyShoot>();
+        
     }
     void Update()
     {
@@ -84,7 +87,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Instantiate((drops[Random.Range(0, 3)]), transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

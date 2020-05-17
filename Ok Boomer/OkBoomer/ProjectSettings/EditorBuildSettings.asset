@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 1caf84976d748dc4f9d285b4d19a0ea9
+  - enabled: 1
+    path: Assets/Scenes/SgtBoomerBoss.unity
+    guid: 24b1fdd4094c52c40a060c83633e5b6b
   m_configObjects: {}
