@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 2137344878518151116}
   - component: {fileID: 2137344878518151107}
   - component: {fileID: 1002233110050727921}
+  - component: {fileID: 7456064718554441285}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -130,6 +131,8 @@ MonoBehaviour:
     m_Bits: 256
   jumpSound: {fileID: 5329388266085892666, guid: 2e4cbeb78fdcdc048bcb0cba57268b20,
     type: 3}
+  hasAmmo: 0
+  isPunching: 0
 --- !u!114 &2137344878518151104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,6 +148,11 @@ MonoBehaviour:
   firepoint: {fileID: 2137344877679744152}
   bulletPrefab: {fileID: 3256222312323726886, guid: a496b0c3d4b32db4790b3529657f741d,
     type: 3}
+  punchPrefab: {fileID: 0}
+  ammo: 0
+  pickUp: {fileID: 0}
+  pm: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!114 &2137344878518151105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,6 +166,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 0}
+  ammoText: {fileID: 0}
+  ammo: 0
+  p: {fileID: 0}
+  pm: {fileID: 0}
+  ps: {fileID: 0}
 --- !u!212 &2137344878518151118
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -267,6 +280,7 @@ MonoBehaviour:
   - {fileID: 0}
   full: {fileID: -8770001503089466214, guid: ccb054ef9cba0e24981906f69377ba9f, type: 3}
   empty: {fileID: 4974403084737825917, guid: ccb054ef9cba0e24981906f69377ba9f, type: 3}
+  ammo: 0
 --- !u!82 &1002233110050727921
 AudioSource:
   m_ObjectHideFlags: 0
@@ -363,6 +377,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7456064718554441285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137344878518151110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25dec86378149e54c9a9dde327f4a24a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
 --- !u!1 &2137344879430015884
 GameObject:
   m_ObjectHideFlags: 0
